@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-6 col-md-6 col-lg-6">
+                <table class="table">
+                    <tr>
+                        <td>username</td>
+                        <td><input type="text" class="form-control" id="uname"></td>
+                    </tr>
+                    <tr>
+                        
+                            <td>password</td>
+                            <td><input type="password" class="form-control" id="password"></td>
+                        
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="button" class="btn btn-success" onclick="login()">login</button></td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col col-12 col-sm-6 col-md-6 col-lg-6">
+               <table class="table">
+                   <tr>
+                       <td>name</td>
+                       <td><input type="text" class="form-control" id="name"></td>
+                   </tr>
+                   <tr>
+                       <td>age</td>
+                       <td><input type="text" class="form-control" id="age"></td>
+                   </tr>
+                   <tr>
+                       <td>date of birth</td>
+                       <td><input type="date" class="form-control" id="dob"></td>
+                   </tr>
+                   <tr>
+                       <td>email</td>
+                       <td><input type="text" class="form-control" id="email"></td>
+                   </tr>
+                   <tr>
+                       <td>place</td>
+                       <td><input type="text" class="form-control" id="place"></td>
+                   </tr>
+                   <tr>
+                       <td>district</td>
+                       <td><select name=""  class="form-control" id="district">
+                           <option value="">select district</option>
+                           <option value="kottayam">kottayam</option>
+                           <option value="erankulam">erankulam</option>
+                           <option value="trivandrum">trivandrum</option>
+                           <option value="kollam">kollam</option>
+                           <option value="kannur">kannur</option>
+                           <option value="alappuzha">alappuzha</option>
+                           <option value="palakkad">palakkad</option>
+                           <option value="pathanamthitta">pathanamthitta</option>
+                           <option value="kasaragod">kasaragod</option>
+                           <option value="wayanad">wayanad</option>
+                           <option value="idukki">idukki</option>
+                           <option value="thrissur">thrissur</option>
+                           <option value="malappuram">malappuram</option>
+                           <option value="kozhikode">kozhikode</option>
+                       </select></td>
+                   </tr>
+                   <tr>
+                       <td>username</td>
+                       <td><input type="text" class="form-control" id="usname"></td>
+                   </tr>
+                   <tr>
+                       <td>password</td>
+                       <td><input type="password" class="form-control" id="upassword"></td>
+                   </tr>
+                   <tr>
+                       <td>confirm pasword</td>
+                       <td><input type="password"  class="form-control" id="cpassword"></td>
+                   </tr>
+                   <tr>
+                       
+                       <td><button type="button" class="btn btn-success" onclick="reset()">reset</button></td>
+                       <td><button type="button" class="btn btn-success" onclick="register()">register</button></td>
+                   </tr>
+                   <tr>
+                       <td></td>
+                       <td><p id="msg"></p></td>
+                   </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+<script>
+    function login()
+    {
+        var a=document.getElementById("uname").value;
+        var b=document.getElementById("password").value;
+        console.log("username :"+a);
+        console.log("password :"+b);
+    }
+    function reset()
+    {
+        document.getElementById("name").value="";
+        document.getElementById("age").value="";
+        document.getElementById("dob").value="";
+        document.getElementById("email").value="";
+        document.getElementById("place").value="";
+        document.getElementById("district").value="";
+        document.getElementById("usname").value="";
+        document.getElementById("upassword").value="";
+        document.getElementById("cpassword").value="";
+
+    }
+    function register()
+    {
+        var name= document.getElementById("name").value;
+        var age= document.getElementById("age").value;
+        var dob=document.getElementById("dob").value;
+        var email=document.getElementById("email").value;
+        var place=document.getElementById("place").value;
+        var district=document.getElementById("district").value;
+        var username=document.getElementById("usname").value;
+        var password=document.getElementById("upassword").value;
+        var cpassword=document.getElementById("cpassword").value;
+        if(password!=cpassword)
+        {
+            document.getElementById("msg").innerHTML="password mismatch";
+        }
+        console.log("name: "+name);
+        console.log("age: "+age);
+        console.log("date of birth: "+dob);
+        console.log("email: "+email);
+        console.log("place: "+place);
+        console.log("district: "+district);
+        console.log("username: "+username);
+        console.log("password: "+password);
+        console.log("confirm password: "+cpassword);
+
+    }
+</script>
+</html>
